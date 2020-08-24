@@ -29,16 +29,16 @@ DataLoad(tableData);
         filteredData = filteredData.filter(ufo => ufo.datetime === inputDateValue);
       }
       if(inputCityValue !== ''){
-        filteredData = filteredData.filter(ufo => ufo.city === inputCityValue);
+        filteredData = filteredData.filter(ufo => ufo.city.toUpperCase() === inputCityValue.toUpperCase());
       }
       if(inputStateValue !== ''){
-        filteredData = filteredData.filter(ufo => ufo.state === inputStateValue);
+        filteredData = filteredData.filter(ufo => ufo.state.toUpperCase() === inputStateValue.toUpperCase());
       }
       if(inputCountryValue !== ''){
-        filteredData = filteredData.filter(ufo => ufo.country === inputCountryValue);
+        filteredData = filteredData.filter(ufo => ufo.country.toUpperCase() === inputCountryValue.toUpperCase());
       }
       if(inputShapeValue !== ''){
-        filteredData = filteredData.filter(ufo => ufo.shape === inputShapeValue);
+        filteredData = filteredData.filter(ufo => ufo.shape.toUpperCase() === inputShapeValue.toUpperCase());
       }    
       DataLoad(filteredData);                         
     }
